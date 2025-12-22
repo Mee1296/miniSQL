@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/ASUS/Desktop/miniSQL/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\ASUS\\Desktop\\miniSQL\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\minisql.dir\\src\\main.cpp.obj /FdCMakeFiles\\minisql.dir\\ /FS -c C:\\Users\\ASUS\\Desktop\\miniSQL\\src\\main.cpp",
+  "file": "C:/Users/ASUS/Desktop/miniSQL/src/main.cpp",
+  "output": "C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/minisql.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/ASUS/Desktop/miniSQL/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\ASUS\\Desktop\\miniSQL\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\minisql.dir\\src\\storage\\serializer.cpp.obj /FdCMakeFiles\\minisql.dir\\ /FS -c C:\\Users\\ASUS\\Desktop\\miniSQL\\src\\storage\\serializer.cpp",
+  "file": "C:/Users/ASUS/Desktop/miniSQL/src/storage/serializer.cpp",
+  "output": "C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/minisql.dir/src/storage/serializer.cpp.obj"
+},
+{
+  "directory": "C:/Users/ASUS/Desktop/miniSQL/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\ASUS\\Desktop\\miniSQL\\include /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /FoCMakeFiles\\minisql.dir\\src\\util\\file.cpp.obj /FdCMakeFiles\\minisql.dir\\ /FS -c C:\\Users\\ASUS\\Desktop\\miniSQL\\src\\util\\file.cpp",
+  "file": "C:/Users/ASUS/Desktop/miniSQL/src/util/file.cpp",
+  "output": "C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/minisql.dir/src/util/file.cpp.obj"
+}
+]
