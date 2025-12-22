@@ -1,3 +1,0 @@
-C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/minisql.dir
-C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/Desktop/miniSQL/build/CMakeFiles/rebuild_cache.dir

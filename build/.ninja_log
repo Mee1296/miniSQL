@@ -1,6 +1,0 @@
-# ninja log v6
-613	883	7881063147079303	mini_db.exe	cbfee492b1487111
-18	464	7881063887957693	CMakeFiles/minisql.dir/src/storage/serializer.cpp.obj	6b4d52a698908c9c
-24	678	7881063888017699	CMakeFiles/minisql.dir/src/util/file.cpp.obj	293a7b25bcdcb3a0
-12	692	7881063887897650	CMakeFiles/minisql.dir/src/main.cpp.obj	3a7734af78bf16fe
-692	1009	7881063894702752	minisql.exe	9edebd6cca5f4c7a
