@@ -22,3 +22,24 @@ std::vector<char> serializeUser(const User& u) {
 
     return buf;
 }
+
+
+User deserializeUser(const char* data) {
+    User u;
+    const char* p = data;
+
+    memcpy(&u.id, p, sizeof(int32_t));
+    p += sizeof(int32_t);
+
+    int32_t name_len;
+    memcpy(&name_len, p, sizeof(int32_t));
+    p += sizeof(int32_t);
+
+    u.name.resize(name_len);
+    memcpy(u.name.data(), p, name_len);
+    p += name_len;
+
+    memcpy(&u.age, p, sizeof(int32_t));
+
+    return u;
+}
