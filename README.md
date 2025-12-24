@@ -3,8 +3,8 @@
 - **Purpose:**: Simple database engine for storing tables and rows with a minimal SQL-like interface and on-disk serialization.
 
 **Build & Run**
-- **Important** Make sure you have CMake installed. if not, visit https://cmake.org/download/
-- **Build:**: Create a build directory and run CMake then build with your generator. Example (Windows PowerShell):
+- **Important:**Make sure you have CMake installed. if not, visit https://cmake.org/download/
+- **Build:** Create a build directory and run CMake then build with your generator. Example (Windows PowerShell):
 
 ```powershell
 mkdir build
