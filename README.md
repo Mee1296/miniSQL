@@ -13,32 +13,32 @@ cmake ..
 cmake --build .
 ```
 
-- **Run:**: After building, run the produced executable (example path):
+- **Run:** After building, run the produced executable (example path):
 
 ```powershell
 .\build\minisql.exe
 ```
 
 **Usage**
-- **Project entry:**: The `src/main.cpp` is still under construction.
-- **Data files:**: Persistent data is stored under the `data/` folder (catalog, schema, users metadata).
+- **Project entry:** The `src/main.cpp` is still under construction.
+- **Data files:** Persistent data is stored under the `data/` folder (catalog, schema, users metadata).
 
 **Column Types (allowed)**
-- **INT:**: 32-bit integer.
-- **TEXT:**: Variable-length text; specify a length when storing/serializing.
-- **DOUBLE:**: 64-bit floating point number.
-- **BOOLEAN:**: Boolean values (true/false).
+- **INT:** 32-bit integer.
+- **TEXT:** Variable-length text; specify a length when storing/serializing.
+- **DOUBLE:** 64-bit floating point number.
+- **BOOLEAN:** Boolean values (true/false).
 
 **Examples**
-- **Create a table (conceptual):**: Define columns using the allowed types. Example schema description:
+- **Create a table (conceptual):** Define columns using the allowed types. Example schema description:
 
-- **Table name:**: users
-- **Columns:**: id(INT), name(TEXT), balance(DOUBLE), active(BOOLEAN)
+- **Table name:** users
+- **Columns:** id(INT), name(TEXT), balance(DOUBLE), active(BOOLEAN)
 
-- **Serialize / load:**: The storage and serializer modules in `src/storage/` handle converting rows to/from disk format.
+- **Serialize / load:** The storage and serializer modules in `src/storage/` handle converting rows to/from disk format.
 
 **Where to look in the source**
-- **Main:**: `src/main.cpp`
-- **Catalog:**: `src/catalog/catalog.cpp` and `include/catalog/catalog.h`
-- **Storage & serializer:**: `src/storage/serializer.cpp`, `src/storage/storage_io.cpp`, and `include/storage/*`
-- **Utilities:**: `src/util/*` and `include/util/*`
+- **Main:** `src/main.cpp`
+- **Catalog:** `src/catalog/catalog.cpp` and `include/catalog/catalog.h`
+- **Storage & serializer:** `src/storage/serializer.cpp`, `src/storage/storage_io.cpp`, and `include/storage/*`
+- **Utilities:** `src/util/*` and `include/util/*`
