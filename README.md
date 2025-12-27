@@ -3,7 +3,7 @@
 - **Purpose:**: Simple database engine for storing tables and rows with a minimal SQL-like interface and on-disk serialization.
 
 **Build & Run**
-- **Important:** Make sure you have CMake installed. if not, visit https://cmake.org/download/
+- **Important:** Make sure you have CMake installed. if not, please visit https://cmake.org/download/
 - **Build:** Create a build directory and run CMake then build with your generator. Example (Windows PowerShell):
 
 ```powershell
@@ -20,7 +20,7 @@ cmake --build .
 ```
 
 **Usage**
-- **Project entry:** The `src/main.cpp` is still under construction.
+- **Project entry:** The `src/main.cpp` is now allow create table and view tables.
 - **Data files:** Persistent data is stored under the `data/` folder (catalog, schema, users metadata).
 
 **Column Types (allowed)**
@@ -29,6 +29,10 @@ cmake --build .
 - **DOUBLE:** 64-bit floating point number.
 - **BOOLEAN:** Boolean values (true/false).
 
+**Allow command**
+- **Create table:** CREATE TABLE table_name (column_name1 COLUMN_TYPE1, column_name2 COLUMN_TYPE2, ...)
+- **View tables:** SHOW TABLE
+
 **Examples**
 - **Create a table (conceptual):** Define columns using the allowed types. Example schema description:
 
@@ -36,6 +40,8 @@ cmake --build .
 - **Columns:** id(INT), name(TEXT), balance(DOUBLE), active(BOOLEAN)
 
 - **Serialize / load:** The storage and serializer modules in `src/storage/` handle converting rows to/from disk format.
+
+- **Command:** CREATE TABLE users (id INT, name TEXT, balance DOUBLE, active BOOLEAN)
 
 **Where to look in the source**
 - **Main:** `src/main.cpp`
