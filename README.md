@@ -20,7 +20,8 @@ cmake --build .
 ```
 
 **Usage**
-- **Project entry:** The `src/main.cpp` is now allow create table and view tables.
+- **Project entry:** The `src/main.cpp` is now allow create, view and drop tables.
+**Note that each data file is now only append row, no header, no row pointer**
 - **Data files:** Persistent data is stored under the `data/` folder (catalog, schema, users metadata).
 
 **Column Types (allowed)**
