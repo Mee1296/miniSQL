@@ -22,10 +22,11 @@ static std::vector<std::string> readCatalog() {
     std::vector<std::string> tables;
     for (uint32_t i = 0; i < n; i++) {
         uint32_t len;
-        in.read((char*)&len, sizeof(len));
+        if (!in.read((char*)&len, sizeof(len))) break;
+        if (len > 256) break;  // sanity limit
 
         std::string name(len, '\0');
-        in.read(name.data(), len);
+        if (!in.read(name.data(), len)) break;
         tables.push_back(name);
     }
     return tables;
@@ -51,6 +52,23 @@ void catalogAddTable(const std::string& table) {
     tables.push_back(table);
     writeCatalog(tables);
 }
+
+bool catalogRemoveTable(const std::string& table) {
+    auto tables = readCatalog();
+    auto old_size = tables.size();
+
+    tables.erase(
+        std::remove(tables.begin(), tables.end(), table),
+        tables.end()
+    );
+
+    if (tables.size() == old_size)
+        return false;
+
+    writeCatalog(tables);
+    return true;
+}
+
 
 std::vector<std::string> catalogListTables() {
     return readCatalog();
