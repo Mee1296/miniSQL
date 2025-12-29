@@ -33,6 +33,8 @@ cmake --build .
 **Allow command** (case sensitive)
 - **Create table:** CREATE TABLE table_name (column_name1 COLUMN_TYPE1, column_name2 COLUMN_TYPE2, ...)
 - **View tables:** SHOW TABLE
+- **INSERT:** INSERT INTO <table> VALUES (column1, column2, ...)
+- **SELECT:** SELECT * FROM <table> *note that only allow * for now*
 
 **Examples**
 - **Create a table (conceptual):** Define columns using the allowed types. Example schema description:
