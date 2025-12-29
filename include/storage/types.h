@@ -8,12 +8,12 @@ enum class ColumnType {
     BOOLEAN
 };
 
-inline size_t typeSize(ColumnType t, size_t text_len = 0) {
-    switch (t) {
-        case ColumnType::INT:  return sizeof(int);
-        case ColumnType::TEXT: return text_len;
-        case ColumnType::DOUBLE: return sizeof(double);
-        case ColumnType::BOOLEAN: return sizeof(bool);
+inline size_t columnStorageSize(const Column& col) {
+    switch (col.type) {
+    case ColumnType::INT:     return 4;
+    case ColumnType::DOUBLE:  return 8;
+    case ColumnType::BOOLEAN: return 1;   
+    case ColumnType::TEXT:    return col.size;
     }
     return 0;
 }

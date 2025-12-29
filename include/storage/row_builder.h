@@ -25,6 +25,14 @@ public:
                 std::memcpy(row.data() + offset, values[i].c_str(),
                             std::min(col.size, values[i].size()));
                 offset += col.size;
+            }else if(col.type == ColumnType::DOUBLE){
+                double v = std::stod(values[i]);
+                std::memcpy(row.data() + offset, &v, sizeof(double));
+                offset += sizeof(double);
+            }else if(col.type == ColumnType::BOOLEAN){
+                uint8_t v = (values[i] == "true" || values[i] == "1") ? 1 : 0;
+                row.data()[offset] = v;
+                offset += 1;
             }
         }
         return row;

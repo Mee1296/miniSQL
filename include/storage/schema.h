@@ -8,8 +8,8 @@ struct Schema {
 
     size_t rowSize() const {
         size_t total = 0;
-        for (auto& c : columns)
-            total += (c.type == ColumnType::TEXT ? c.size : sizeof(int));
+        for (auto& col : columns)
+            total += columnStorageSize(col);
         return total;
     }
 };

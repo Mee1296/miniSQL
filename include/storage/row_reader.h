@@ -13,16 +13,25 @@ public:
             if (col.type == ColumnType::INT) {
                 int v;
                 std::memcpy(&v, row.data() + offset, sizeof(int));
-                std::cout << v << " ";
+                std::cout << v << "\t";
                 offset += sizeof(int);
             }
-            else {
+            else if( col.type == ColumnType::TEXT) {
                 std::string s(
                     (char*)row.data() + offset,
                     col.size
                 );
-                std::cout << s.c_str() << " ";
+                std::cout << s.c_str() << "\t";
                 offset += col.size;
+            }else if(col.type == ColumnType::DOUBLE){
+                double v;
+                std::memcpy(&v, row.data() + offset, sizeof(double));
+                std::cout << v << "\t";
+                offset += sizeof(double);
+            }else if(col.type == ColumnType::BOOLEAN){
+                uint8_t v = row.data()[offset];
+                std::cout << (v ? "true" : "false") << "\t";
+                offset += 1;
             }
         }
         std::cout << "\n";
