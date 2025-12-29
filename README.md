@@ -30,7 +30,7 @@ cmake --build .
 - **DOUBLE:** 64-bit floating point number.
 - **BOOLEAN:** Boolean values (true/false).
 
-**Allow command**
+**Allow command** (case sensitive)
 - **Create table:** CREATE TABLE table_name (column_name1 COLUMN_TYPE1, column_name2 COLUMN_TYPE2, ...)
 - **View tables:** SHOW TABLE
 

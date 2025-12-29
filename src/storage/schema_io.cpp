@@ -1,5 +1,6 @@
 #include "storage/schema.h"
 #include <fstream>
+#include <iostream>
 
 void writeSchema(const Schema& schema, const std::string& path) {
     std::ofstream out(path, std::ios::binary);
@@ -40,4 +41,25 @@ Schema readSchema(const std::string& path) {
         s.columns.push_back(c);
     }
     return s;
+}
+
+void printSchema(const Schema& schema) {
+    for (auto& c : schema.columns) {
+        std::cout << c.name << "|\t";
+        // switch (c.type) {
+        //     case ColumnType::INT:
+        //         std::cout << "INT\t|";
+        //         break;
+        //     case ColumnType::TEXT:
+        //         std::cout << "TEXT(" << c.size << ")\t|";
+        //         break;
+        //     case ColumnType::DOUBLE:
+        //         std::cout << "DOUBLE\t|";
+        //         break;
+        //     case ColumnType::BOOLEAN:
+        //         std::cout << "BOOLEAN\t|";
+        //         break;
+        // }
+    }
+    std::cout << "\n";
 }
